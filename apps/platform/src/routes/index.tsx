@@ -17,6 +17,7 @@ function App() {
 
 	return (
 		<div>
+			<div>ini header</div>
 			<CreateTodoForm />
 			<div>
 				{todos.map((todo) => {
