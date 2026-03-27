@@ -6,5 +6,13 @@ jobs:
   test-cicd:
     runs-on: ubuntu-latest
     steps:
-      - name: Ahlan
-        run: echo "Ahlan wa sahlan"
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - name: Setup PNPM
+        run: npm install -g pnpm@latest
+      - name: setup dependency
+        run: pnpm i --frozen-lockfile
+      - name: Run linter
+        run: pnpm lint
