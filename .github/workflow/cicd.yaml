@@ -1,0 +1,10 @@
+on:
+  push:
+    branch: -main
+
+jobs:
+  test-cicd:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ahlan
+        run: echo "Ahlan wa sahlan"
